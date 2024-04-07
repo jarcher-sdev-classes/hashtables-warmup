@@ -95,7 +95,7 @@ The load factor is a key determinant of the hash table's performance. It is a nu
 determines how full a hash table can become, whether you are using separate chaining or
 open addressing for the hash table. 
 
-The load factor of a table is defined as <span style="color: lightgreen">$loadFactor = \frac{size}{capacity}$</span>. Where the
+The load factor of a table is defined as $loadFactor = \frac{size}{capacity}$. Where the
 size is the number of occupied spots in the hash table and the capacity is the total
 spots.
 
@@ -157,12 +157,12 @@ by the hash function due to it being already occupied.
 
 With the above modifications in place, you should now conduct an experiment to gauge the impact 
 of various load factors on your hash table's operational performance and spatial efficiency. 
-
 For each load factor from 10% to 90% (e.g., every 10%), do the following:
 
 Populate your hash table with a predetermined quantity of elements:
-- A text file has been provided for this experiment in the files/ directory
-- Loop over each of the words in the file and add them to the hash table
+- A text file has been provided to help with the experiment. It is located in the files/ 
+  directory.
+- You should loop over each of the words in the file and add them to the hash table.
 
 Then record the following data points on the Java console:
 
@@ -182,8 +182,8 @@ Here is an example of what your output may look like:
 ### Analysis
 
 Include a file in your project folder called <span style="font-weight: bold; color: lightgreen">
-analysis.txt</span>. Inside of the file, provide an answer
-to the following questions, based on the output you are seeing from your experiment.
+analysis.txt</span>. Inside the file, provide an answer to the following questions, 
+based on the output you are seeing from your experiment.
 - How does load factor affect the time efficiency of a hash table?
 - How does load factor affect the space efficiency of a hash table?
 - Why does the total and unused capacity of the hash table remain the same for high load factors?
