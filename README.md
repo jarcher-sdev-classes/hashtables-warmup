@@ -95,7 +95,7 @@ The load factor is a key determinant of the hash table's performance. It is a nu
 determines how full a hash table can become, whether you are using separate chaining or
 open addressing for the hash table. 
 
-The load factor of a table is defined as $loadFactor = \frac{size}{capacity}$. Where the
+The load factor of a table is defined as $\color{purple}loadFactor = \frac{size}{capacity}$. Where the
 size is the number of occupied spots in the hash table and the capacity is the total
 spots.
 
