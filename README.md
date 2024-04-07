@@ -11,7 +11,6 @@ Linear probing handles collisions by placing the collided item in the
 next empty slot found linearly in the table. It's crucial to manage the load factor properly 
 in such tables to maintain efficient operations, since a high load factor can lead to many 
 collisions, which in turn degrade the performance of the hash table.
-<hr>
 
 ## Objectives
 
@@ -24,7 +23,6 @@ collisions, which in turn degrade the performance of the hash table.
 - To write an iterator over a complex structure.
 
 ## Open Addressing with Linear Probing
-<hr>
 
 Unlike separate chaining, where a linked list is used at each index to handle collisions, 
 open addressing with linear probing places all elements directly in the hash table array. 
@@ -132,7 +130,6 @@ of the array. As the array size changes, so does the index calculated for each e
    new array, the new array becomes the active table.
 
 ## Empirical Analysis of Load Factor and Console Reporting
-<hr>
 
 <img src="imgs/ht_3.jpg" style="width:500px;">
 
