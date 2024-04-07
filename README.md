@@ -1,6 +1,6 @@
 <img src="imgs/ht_2.jpg" style="width: 500px;">
 
-# Hash Tables Part #2
+# Individual Assignment: Hash Tables 
 
 For this assignment, you will be building a basic hash table using open addressing with linear 
 probing. In open addressing tables, all elements are stored within the array itself, and 
@@ -29,13 +29,17 @@ collisions, which in turn degrade the performance of the hash table.
 Unlike separate chaining, where a linked list is used at each index to handle collisions, 
 open addressing with linear probing places all elements directly in the hash table array. 
 
+<img src="imgs/ht_8.png" style="width: 400px;">
+
 When adding an element and a collision occurs, the table is probed linearly (i.e., checking 
 the next index) until an empty slot is found. This method ensures all table slots are utilized, 
 reducing wasted space.
 
-Note: It may sometimes be necessary to search the table around its boundaries. In such cases
+<img src="imgs/ht_9.png" style="width: 500px;">
+
+<p style="font-style: italic">Note: It may sometimes be necessary to search the table around its boundaries. In such cases
 the probing should using the modulus operator to ensure that the next index will never be invalid.
-For example, to move to the next higher index, you could do the following:
+For example, to move to the next higher index, you could do the following:</p>
 
 ```java
 int nextIndex = (currentIndex + 1) % table.length
@@ -69,6 +73,8 @@ above. Some starter files have been provided for you:
   data.
 - **HashTableTest:** A group of JUnit 5 tests that can be used to verify your work.
 - **EmpiricalAnalysis:** A driver class that will be used to analyze your work (see below).
+
+<img src="imgs/ht_5.png" style="width: 400px;">
 
 ## Verification of the HashTable
 
@@ -106,10 +112,12 @@ larger array and then rehashing all existing elements into this new array. Rehas
 necessary because the position where an element is stored is directly tied to the size 
 of the array. As the array size changes, so does the index calculated for each element.
 
+<img src="imgs/ht_7.png" style="width: 600px;">
+
 #### Hints for Implementing Resizing:
 
 1. **Detect when to Resize:** Keep track of the number of elements in the table and the
-   size of the internal array. When `(number of elements / size of the internal array) > 0.6`,
+   size of the internal array. When `(size / capacity) > 0.6`,
    initiate the resize process.
 2.  **Creating a New Array:** Determine the new size of the array. It's common to double
     the size of the array to ensure that the resized table can accommodate future insertions
@@ -169,11 +177,12 @@ Then record the following data points on the Java console:
 
 Here is an example of what your output may look like:
 
-<img src="imgs/ht_1.png" style="width:700px;">
+<img src="imgs/ht_1.png" style="width:800px;">
 
 ### Analysis
 
-Include a file in your project folder called analysis.txt. Inside of the file, provide an answer
+Include a file in your project folder called <span style="font-weight: bold; color: lightgreen">
+analysis.txt</span>. Inside of the file, provide an answer
 to the following questions, based on the output you are seeing from your experiment.
 - How does load factor affect the time efficiency of a hash table?
 - How does load factor affect the space efficiency of a hash table?
@@ -187,5 +196,6 @@ Here are some reminders on how to submit your work:
 
 - Make sure that all relevant files are committed and push to the Github repository on Github Classroom.
 - Before submitting your work, run the unit tests provided to verify your HashTable class.
-- Your project must pass a Linter check to be considered for grading.
-- Your project folder should have an analysis.txt file answering the questions above.
+- Your project <span style="text-decoration: underline">must</span> pass a Linter check to be considered for grading.
+- Your project folder should have an <span style="font-weight: bold; color: lightgreen">
+  analysis.txt</span> file answering the questions above.
