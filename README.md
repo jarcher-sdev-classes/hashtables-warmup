@@ -95,7 +95,7 @@ The load factor is a key determinant of the hash table's performance. It is a nu
 determines how full a hash table can become, whether you are using separate chaining or
 open addressing for the hash table. 
 
-The load factor of a table is defined as $\color{purple}loadFactor = \frac{size}{capacity}$. Where the
+The load factor of a table is defined as $\color{lightgreen}loadFactor = \frac{size}{capacity}$. Where the
 size is the number of occupied spots in the hash table and the capacity is the total
 spots.
 
@@ -181,8 +181,7 @@ Here is an example of what your output may look like:
 
 ### Analysis
 
-Include a file in your project folder called <span style="font-weight: bold; color: lightgreen">
-analysis.txt</span>. Inside the file, provide an answer to the following questions, 
+Include a file in your project folder called $\color{lightgreen}analysis.txt$. Inside the file, provide an answer to the following questions, 
 based on the output you are seeing from your experiment.
 - How does load factor affect the time efficiency of a hash table?
 - How does load factor affect the space efficiency of a hash table?
@@ -197,5 +196,4 @@ Here are some reminders on how to submit your work:
 - Make sure that all relevant files are committed and push to the Github repository on Github Classroom.
 - Before submitting your work, run the unit tests provided to verify your HashTable class.
 - Your project <span style="text-decoration: underline">must</span> pass a Linter check to be considered for grading.
-- Your project folder should have an <span style="font-weight: bold; color: lightgreen">
-  analysis.txt</span> file answering the questions above.
+- Your project folder should have an $\color{lightgreen}analysis.txt$ file answering the questions above.
