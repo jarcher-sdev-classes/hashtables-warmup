@@ -14,9 +14,7 @@ public interface ISet<T> extends Iterable<T>
 {
     /**
      * Adds an element to the collection. No specific ordering
-     * is required. After the load factor has exceeded 250% the
-     * table should rehash all elements into a table that is 50%
-     * larger than the previous table size.
+     * is required.
      *
      * @throws IllegalArgumentException thrown when a duplicate
      * element is added to the table
