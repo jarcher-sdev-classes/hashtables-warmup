@@ -149,6 +149,7 @@ public class HashTableTest {
         addTestElements();
 
         //look for missing elements
+        assertEquals(testValues.length, table.size(), "size() does not match the number of inserted elements");
         assertFalse(table.contains("!"), "table should not report missing elements as present in the table");
     }
 
@@ -217,9 +218,13 @@ public class HashTableTest {
     public void getMissingTest() {
         //add a table without an element
         ISet<TestClass> testTable = getTableTestClass();
-        TestClass testElement = new TestClass(1, 2);
+        TestClass firstElement = new TestClass(1, 2);
+        TestClass secondElement = new TestClass(1, 4);
 
-        assertNull(testTable.find(testElement), "find() does not return null for a missing element");
+        testTable.add(secondElement);
+        assertEquals(1, testTable.size(), "size() should be one after adding a single element");
+
+        assertNull(testTable.find(firstElement), "find() does not return null for a missing element");
     }
 
     /**
@@ -238,6 +243,7 @@ public class HashTableTest {
         //first element is in the table, not second
         testTable.add(firstElement);
 
+        assertNotNull(testTable.find(secondElement), "Element not found with find()");
         assertNotSame(secondElement, testTable.find(secondElement),
             "Element in table is not returned when calling the find() method");
     }
