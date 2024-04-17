@@ -218,8 +218,8 @@ public class HashTableTest {
     public void getMissingTest() {
         //add a table without an element
         ISet<TestClass> testTable = getTableTestClass();
-        TestClass firstElement = new TestClass(1, 2);
-        TestClass secondElement = new TestClass(1, 4);
+        TestClass firstElement = new TestClass(1, 10);
+        TestClass secondElement = new TestClass(2, 15);
 
         testTable.add(secondElement);
         assertEquals(1, testTable.size(), "size() should be one after adding a single element");
