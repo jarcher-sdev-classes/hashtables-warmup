@@ -1,5 +1,6 @@
 import adts.ISet;
 import hashtables.HashTable;
+import hashtables.TableSolution;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -21,9 +22,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class HashTableTest {
     public static final double LOAD_FACTOR = 0.5;
     private ISet<String> table;
-    private final String[] testValues = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
-                             "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
-                             "u", "v", "w", "x", "y", "z"};
+    private final String[] testValues = {
+        "Quintessence", "Serendipity", "Luminous", "Incandescent", "Ephemeral",
+        "Phantasmagoric", "Mellifluous", "Labyrinthine", "Panacea", "Gossamer",
+        "Elixir", "Halcyon", "Sonorous", "Renaissance", "Arcadia", "Surreptitious",
+        "Empyrean", "Nebulous", "Vivacious", "Aurora", "Bucolic", "Celestial",
+        "Decadence", "Enigmatic", "Felicitous", "Ineffable", "Jubilant", "Kaleidoscope",
+        "Lugubrious", "Metamorphosis"
+    };
 
     /**
      * Creates a new empty table.
@@ -34,11 +40,11 @@ public class HashTableTest {
     }
 
     private ISet<String> getTable() {
-        return new HashTable<>(LOAD_FACTOR);
+        return new TableSolution<>(LOAD_FACTOR);
     }
 
     private ISet<TestClass> getTableTestClass() {
-        return new HashTable<>(LOAD_FACTOR);
+        return new TableSolution<>(LOAD_FACTOR);
     }
 
     private void addTestElements() {
@@ -104,9 +110,12 @@ public class HashTableTest {
      * @param value a value to remove from the set
      */
     @ParameterizedTest
-    @ValueSource(strings = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
-            "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
-            "u", "v", "w", "x", "y", "z"})
+    @ValueSource(strings = {"Quintessence", "Serendipity", "Luminous", "Incandescent", "Ephemeral",
+            "Phantasmagoric", "Mellifluous", "Labyrinthine", "Panacea", "Gossamer",
+            "Elixir", "Halcyon", "Sonorous", "Renaissance", "Arcadia", "Surreptitious",
+            "Empyrean", "Nebulous", "Vivacious", "Aurora", "Bucolic", "Celestial",
+            "Decadence", "Enigmatic", "Felicitous", "Ineffable", "Jubilant", "Kaleidoscope",
+            "Lugubrious", "Metamorphosis"})
     public void removeTest(String value)
     {
         addTestElements();
@@ -332,7 +341,7 @@ public class HashTableTest {
         Iterator<String> iter = table.iterator();
         assertThrows(ConcurrentModificationException.class, () -> {
             //modify the structure after accessing the iterator
-            table.remove("a");
+            table.remove("Sonorous");
 
             boolean more = iter.hasNext(); //this should throw an exception
             if (more) {
