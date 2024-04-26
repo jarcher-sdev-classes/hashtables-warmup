@@ -1,4 +1,4 @@
-<img src="imgs/ht_2.jpg" style="width: 500px;">
+<img src="assn-imgs/ht_2.jpg" style="width: 500px;">
 
 # Individual Assignment: Hash Tables 
 
@@ -27,13 +27,13 @@ collisions, which in turn degrade the performance of the hash table.
 Unlike separate chaining, where a linked list is used at each index to handle collisions, 
 open addressing with linear probing places all elements directly in the hash table array. 
 
-<img src="imgs/ht_8.png" style="width: 400px;">
+<img src="assn-imgs/ht_8.png" style="width: 400px;">
 
 When adding an element and a collision occurs, the table is probed linearly (i.e., checking 
 the next index) until an empty slot is found. This method ensures all table slots are utilized, 
 reducing wasted space.
 
-<img src="imgs/ht_9.png" style="width: 500px;">
+<img src="assn-imgs/ht_9.png" style="width: 500px;">
 
 <p style="font-style: italic">Note: It may sometimes be necessary to search the table around its boundaries. In such cases
 the probing should using the modulus operator to ensure that the next index will never be invalid.
@@ -72,20 +72,20 @@ above. Some starter files have been provided for you:
 - **HashTableTest:** A group of JUnit 5 tests that can be used to verify your work.
 - **EmpiricalAnalysis:** A driver class that will be used to analyze your work (see below).
 
-<img src="imgs/ht_5.png" style="width: 400px;">
+<img src="assn-imgs/ht_5.png" style="width: 400px;">
 
 ## Verification of the HashTable
 
 When complete, all <span style="text-decoration: underline">unit tests</span> in the 
 HashTableTest file should have a pass rating.
 
-<img src="imgs/ht_4.png" style="width:600px;">
+<img src="assn-imgs/ht_4.png" style="width:600px;">
 
 Your code is also expected to pass a <span style="text-decoration: underline">linter check</span>
 , as previously covered. Any submissions with outstanding linter problems will be returned to 
 a student for revision.
 
-<img src="imgs/ht_6.png" style="width:600px;">
+<img src="assn-imgs/ht_6.png" style="width:600px;">
 
 ### Why is Load Factor Important?
 
@@ -110,7 +110,7 @@ larger array and then rehashing all existing elements into this new array. Rehas
 necessary because the position where an element is stored is directly tied to the size 
 of the array. As the array size changes, so does the index calculated for each element.
 
-<img src="imgs/ht_7.png" style="width: 600px;">
+<img src="assn-imgs/ht_7.png" style="width: 600px;">
 
 #### Hints for Implementing Resizing:
 
@@ -131,7 +131,7 @@ of the array. As the array size changes, so does the index calculated for each e
 
 ## Empirical Analysis of Load Factor and Console Reporting
 
-<img src="imgs/ht_3.jpg" style="width:500px;">
+<img src="assn-imgs/ht_3.jpg" style="width:500px;">
 
 To deepen your understanding of how the load factor impacts both the performance (time complexity) 
 and space utilization (memory usage) of your hash table, you should make the following changes to 
@@ -174,7 +174,7 @@ Then record the following data points on the Java console:
 
 Here is an example of what your output may look like:
 
-<img src="imgs/ht_1.png" style="width:800px;">
+<img src="assn-imgs/ht_1.png" style="width:800px;">
 
 ### Analysis
 

@@ -276,6 +276,9 @@ public class HashTableTest {
         //store an array of flags - true: found, false: not-found
         boolean[] found = new boolean[testValues.length];
         for (String element : table) {
+            //no element returned from the iterator should be null
+            assertNotNull(element, "null element found with iterator");
+
             //find the element, mark it as found
             for (int i = 0; i < testValues.length; i++) {
                 if (testValues[i].equals(element)) {
